@@ -3,19 +3,59 @@
 <script lang="ts">
 	export let name: string;
 	export let play: (choice: string) => void;
-	export let image: string;
+	export let image: string;	
 </script>
 
-<button on:click={() => play(name)} aria-label={`bouton pour jouer ${name}`}>
-	<img src={image} alt="Image d'une main en forme de {name}" />
-</button>
+<div class="button-{name}">
+	<button on:click={() => play(name)} aria-label={`bouton pour jouer ${name}`}>
+		<img src={image} alt="Image d'une main en forme de {name}" class="game-controls" />
+	</button>
+</div>
 
 <style>
 	button {
-        cursor: pointer;
-		width: 100px;
-		height: 100px;
+		cursor: pointer;
+		width: 150px;
+		height: 150px;
 		border: none;
+		background-color: white;
+		border-radius: 100px;	
+		box-shadow: inset 0px 10px 0px 0px hsl(214, 10%, 86%);
+	}
+
+	.button-pierre{
+		width: 200px;
+		height: 200px;
+		border-radius: 200px;
+		background: linear-gradient(to bottom, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.button-feuille{
+		width: 200px;
+		height: 200px;
+		border-radius: 200px;
+		background: linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+	}
+
+	.button-ciseau{
+		width: 200px;
+		height: 200px;
+		border-radius: 200px;
+		background: linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+	}
+
+	.game-controls {
 		background-color: white;
 	}
 </style>
