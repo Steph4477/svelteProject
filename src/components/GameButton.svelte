@@ -29,9 +29,9 @@
     }
 	
 	button:hover {
-		box-shadow: none;
-		
+		box-shadow: none;		
 	}
+
 	.button-pierre{
 		width: 150px;
 		height: 150px;
@@ -40,6 +40,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		
 	}
 
 	.button-feuille{
@@ -49,8 +50,7 @@
 		background: linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
 		display: flex;
 		justify-content: center;
-		align-items: center;
-		
+		align-items: center;	
 	}
 
 	.button-ciseau{
@@ -60,8 +60,7 @@
 		background: linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
 		display: flex;
 		justify-content: center;
-		align-items: center;
-		
+		align-items: center;		
 	}
 
 	.game-controls {

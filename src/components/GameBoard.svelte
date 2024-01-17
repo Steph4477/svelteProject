@@ -13,18 +13,18 @@
 </script>
 
 <div class="game-body">
-    <img src={triangle} alt="Triangle" class="triangle" />
+    <img src={triangle} alt="Triangle" class="triangle" style="display: {hideNoChoice ? 'none' : 'block'}" />
     <!-- hide the no choice by the user and the computer -->
-    <div class="button-rock" style="display: {hideNoChoice && userChoice !== 'pierre' && computerChoice !== 'pierre' ? 'none' : 'block'}"> 
+    <div class="button-rock" class:positioned = {userChoice === 'pierre'} style="display: {hideNoChoice && userChoice !== 'pierre' && computerChoice !== 'pierre' ? 'none' : 'block'}">
         <GameButton name="pierre" {play} image={rock} />
     </div>
     <div class="button-paper" style="display: {hideNoChoice && userChoice !== 'feuille' && computerChoice !== 'feuille' ? 'none' : 'block'}">
         <GameButton name="feuille" {play} image={paper} />
     </div>
-    <div class="button-scissors" style="display: {hideNoChoice && userChoice !== 'ciseau' && computerChoice !== 'ciseau' ? 'none' : 'block'}">
+    <div class="button-scissors" class:positioned = {userChoice === 'ciseau'} style="display: {hideNoChoice && userChoice !== 'ciseau' && computerChoice !== 'ciseau' ? 'none' : 'block'}">
         <GameButton name="ciseau" {play} image={scissors} />
     </div>
-
+    
     <GameRules {userChoice} {computerChoice} />
 </div>
 
@@ -45,23 +45,32 @@
         position: absolute;
         transform: translate(-50%, -50%);
     }
+
     .button-rock:hover, .button-paper:hover, .button-scissors:hover {
         transform: translate(-50%, -50%) scale(1.5);
     }
 
-
     .button-rock {
         top: 120%;
         left: 50%;
+        transition: transform 0.3s ease; 
     }
     
     .button-paper {
         top: 0%;
         left: 40%;
+        transition: transform 0.3s ease; 
     }
 
     .button-scissors {
         top: 0%;
         left: 60%;
+        transition: transform 0.3s ease; 
+    }
+
+    /* Nouvelle classe pour ajuster la position */
+    .positioned {
+        top: 0%;
+        left: 40%;
     }
 </style>

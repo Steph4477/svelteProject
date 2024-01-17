@@ -1,6 +1,5 @@
 <!-- +page.svelte -->
 <script lang="ts">
-    import ListContainer from '../components/ListContainer.svelte';
     import Header from '../components/Header.svelte';
     import GameBoard from '../components/GameBoard.svelte';
 
@@ -35,5 +34,4 @@
         color: white;
         margin-bottom: 5vh;
     }
- 
 </style>
