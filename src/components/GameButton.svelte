@@ -13,20 +13,29 @@
 </div>
 
 <style>
-	button {
-		cursor: pointer;
+    button {
+        cursor: pointer;
+        width: 100px;
+        height: 100px;
+        border: none;
+        background-color: white;
+        border-radius: 100px;	
+        transition: transform 0.3s ease; 
+		box-shadow: inset 0px 10px 0px 0px hsl(214, 10%, 86%);
+    }
+
+    button:active {
+        transform: translateY(-10px);
+    }
+	
+	button:hover {
+		box-shadow: none;
+		
+	}
+	.button-pierre{
 		width: 150px;
 		height: 150px;
-		border: none;
-		background-color: white;
-		border-radius: 100px;	
-		box-shadow: inset 0px 10px 0px 0px hsl(214, 10%, 86%);
-	}
-
-	.button-pierre{
-		width: 200px;
-		height: 200px;
-		border-radius: 200px;
+		border-radius: 100px;
 		background: linear-gradient(to bottom, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
 		display: flex;
 		justify-content: center;
@@ -34,9 +43,9 @@
 	}
 
 	.button-feuille{
-		width: 200px;
-		height: 200px;
-		border-radius: 200px;
+		width: 150px;
+		height: 150px;
+		border-radius: 100px;
 		background: linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
 		display: flex;
 		justify-content: center;
@@ -45,9 +54,9 @@
 	}
 
 	.button-ciseau{
-		width: 200px;
-		height: 200px;
-		border-radius: 200px;
+		width: 150px;
+		height: 150px;
+		border-radius: 100px;
 		background: linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
 		display: flex;
 		justify-content: center;
